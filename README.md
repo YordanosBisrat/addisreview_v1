@@ -61,10 +61,6 @@ database. It was built as a 24-hour internship assignment to demonstrate:
 - Node.js + Express
 - SQLite via [`sql.js`]
 
-**Tooling**
-- Git for version control
-- Plain JavaScript throughout (no TypeScript, per project requirements)
-
 ---
 
 ## Future Improvements
