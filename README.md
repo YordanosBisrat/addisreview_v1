@@ -59,7 +59,7 @@ database. It was built as a 24-hour internship assignment to demonstrate:
 
 **Backend**
 - Node.js + Express
-- SQLite via [`sql.js`](https://github.com/sql-js/sql.js) (see note below)
+- SQLite via [`sql.js`]
 
 **Tooling**
 - Git for version control
