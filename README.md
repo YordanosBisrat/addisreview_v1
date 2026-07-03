@@ -22,7 +22,6 @@ inspired by product design at Airbnb, Stripe, and Notion.
 9. [API Endpoints](#api-endpoints)
 10. [Database Schema](#database-schema)
 11. [Future Improvements](#future-improvements)
-12. [Screenshots](#screenshots)
 
 ---
 
