@@ -15,13 +15,7 @@ inspired by product design at Airbnb, Stripe, and Notion.
 1. [Overview](#overview)
 2. [Features](#features)
 4. [Tech Stack](#tech-stack)
-5. [Architecture](#architecture)
-6. [Folder Structure](#folder-structure)
-7. [Installation](#installation)
-8. [Running the App](#running-the-app)
-9. [API Endpoints](#api-endpoints)
-10. [Database Schema](#database-schema)
-11. [Future Improvements](#future-improvements)
+5. [Future Improvements](#future-improvements)
 
 ---
 
@@ -73,53 +67,6 @@ database. It was built as a 24-hour internship assignment to demonstrate:
 
 ---
 
-## Architecture
-
-```
-┌─────────────────┐        REST (JSON over HTTP)        ┌──────────────────┐
-│  React Client    │ ───────────────────────────────────▶│  Express Server  │
-│  (Vite, :5173)    │◀─────────────────────────────────── │     (:5000)      │
-└─────────────────┘                                       └──────────────────┘
-                                                                     │
-                                                          Controllers call Models
-                                                                     │
-                                                                     ▼
-                                                            ┌──────────────┐
-                                                            │  SQLite DB   │
-                                                            │  (sql.js)    │
-                                                            └──────────────┘
-```
----
-
-## Folder Structure
-
-```
-belke/
-├── client/                  # React + Vite frontend
-│   ├── src/
-│   │   ├── components/      # Reusable UI components
-│   │   ├── pages/           # Route-level pages
-│   │   ├── services/        # Axios API calls
-│   │   ├── hooks/           # Custom React hooks (e.g. useToast)
-│   │   ├── utils/           # Formatting helpers
-│   │   └── styles/          # Global CSS variables & base styles
-│   └── package.json
-│
-├── server/                  # Node.js + Express backend
-│   ├── routes/               # Express route definitions
-│   ├── controllers/          # Request handlers
-│   ├── models/                # SQL queries
-│   ├── middleware/            # Validation & error handling
-│   ├── database/               # schema.sql + seed.js
-│   ├── config/                  # DB connection module
-│   ├── utils/                    # asyncHandler, ApiError
-│   └── package.json
-│
-├── .gitignore
-└── README.md
-```
----
-
 ## Future Improvements
 
 - User authentication (so reviews are tied to real accounts, not free-text names)
@@ -128,6 +75,5 @@ belke/
 - Image uploads for reviews and businesses (instead of stock photo URLs)
 - Pagination/infinite scroll for businesses and reviews
 - Map view (Google Maps / Leaflet) showing all businesses at once
-- Deployment (e.g. Render/Railway for the API, Vercel/Netlify for the client) with a real Postgres database for concurrent-write safety
 
 ---
